@@ -100,7 +100,7 @@ namespace pyRuizdeOlano_IEFI
                 Conectar();
                 comando.CommandText = "SELECT Contraseña FROM usuarios WHERE NombreUsuarios = @NombreUsuarios";
                 comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@NombreUsuarios", nombreUsuario);
+                comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
                 object result = comando.ExecuteScalar();
                 if (result != null)
                 {
@@ -127,14 +127,14 @@ namespace pyRuizdeOlano_IEFI
             try
             {
                 Conectar();
-                comando.CommandText = "INSERT INTO Sesiones (NombreUsuario, FechalInicio) VALUES (@NombreUsuario, @FechaInicio)";
+
+                comando.CommandText = "INSERT INTO usuarios (NombreUsuarios, FechaInicio, FechaFin, DuracionSegundos) VALUES (@NombreUsuario, @FechaInicio, @FechaFin, @DuracionSegundos)";
                 comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+                comando.Parameters.AddWithValue("@NombreUsuarios", nombreUsuario);
                 comando.Parameters.AddWithValue("@FechaInicio", DateTime.Now);
-                comando.ExecuteNonQuery();
-                comando.CommandText = "SELECT @@IDENTITY";
-                int idSesion = Convert.ToInt32(comando.ExecuteScalar());
-                return idSesion;
+                comando.Parameters.AddWithValue("@FechaFin", DBNull.Value);
+                comando.Parameters.AddWithValue("@DuracionSegundos", 0);
+                return 1;
 
 
             }
@@ -151,11 +151,28 @@ namespace pyRuizdeOlano_IEFI
         }
         public bool ActualizarFinSesion(int idSesion, DateTime fechaFin, int duracionSegundos)
         {
-            try
+            try 
             {
 
                 Conectar();
                 comando.CommandText = "UPDATE Sesiones SET FechaFin = @FechaFin, DuracionSegundos = @DuracionSegundos WHERE IdSesion = @IdSesion";
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@FechaFin", fechaFin);
+                comando.Parameters.AddWithValue("@DuracionSegundos", duracionSegundos);
+                comando.Parameters.AddWithValue("@IdSesion", idSesion);
+                int filasAfectadas = comando.ExecuteNonQuery();
+                return filasAfectadas > 0;
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show($"Error al actualizar el fin de sesión: {ex.Message}", "Error de Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+
+            }
+            finally
+            {
+                Desconectar();
             }
         }
 

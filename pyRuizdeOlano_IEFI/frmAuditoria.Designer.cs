@@ -34,6 +34,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblTiempo = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -56,6 +57,11 @@
             this.lblNombreUsuario.TabIndex = 4;
             this.lblNombreUsuario.Text = "label1";
             // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // lblTiempo
             // 
             this.lblTiempo.AutoSize = true;
@@ -74,12 +80,23 @@
             this.lblFecha.TabIndex = 6;
             this.lblFecha.Text = "label1";
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.AutoSize = true;
+            this.btnSiguiente.Location = new System.Drawing.Point(328, 380);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(135, 58);
+            this.btnSiguiente.TabIndex = 7;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            // 
             // frmAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.lblNombreUsuario);
@@ -99,5 +116,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

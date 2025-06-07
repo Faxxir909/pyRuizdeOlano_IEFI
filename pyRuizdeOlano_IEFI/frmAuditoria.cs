@@ -23,18 +23,17 @@ namespace pyRuizdeOlano_IEFI
         private void frmAuditoria_Load(object sender, EventArgs e)
         {
             bdUsuarios usuarios = new bdUsuarios();
-            sesionActual = usuarios.RegistrarInicioSesion(nombreUsuarioLogueado);
+            sesionActual = usuarios.RegistrarInicioSesion(nombreUsuarioLogueado); 
             if (sesionActual != -1)
             {
                 timer.Start();
                 lblTiempo.Text = "00:00:00";
-
             }
-            else
+            else 
             {
                 MessageBox.Show("No se pudo iniciar el registro de sesión. El tiempo no se guardará.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            lblFecha.Text="Fecha" + DateTime.Now.ToShortDateString();
+            lblFecha.Text = "Fecha" + DateTime.Now.ToShortDateString();
         }
         public frmAuditoria(string usuario)
         {
@@ -46,7 +45,7 @@ namespace pyRuizdeOlano_IEFI
         {
             Tiempo++;
             TimeSpan tiempo = TimeSpan.FromSeconds(Tiempo);
-            lblTiempo.Text += tiempo.ToString(@"hh\:mm\:ss");
+            lblTiempo.Text = tiempo.ToString(@"hh\:mm\:ss");
         }
         private void frmAuditoria_FormClosing(object sender, FormClosingEventArgs e)
         {
