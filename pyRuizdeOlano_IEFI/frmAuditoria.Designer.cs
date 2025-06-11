@@ -35,6 +35,8 @@
             this.lblTiempo = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
+            this.rbUsuario = new System.Windows.Forms.RadioButton();
+            this.rbAdministrador = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label3
@@ -42,7 +44,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(260, 108);
+            this.label3.Location = new System.Drawing.Point(161, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(269, 42);
             this.label3.TabIndex = 3;
@@ -51,7 +53,7 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 428);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 237);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(35, 13);
             this.lblNombreUsuario.TabIndex = 4;
@@ -65,7 +67,7 @@
             // lblTiempo
             // 
             this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Location = new System.Drawing.Point(599, 428);
+            this.lblTiempo.Location = new System.Drawing.Point(264, 237);
             this.lblTiempo.Name = "lblTiempo";
             this.lblTiempo.Size = new System.Drawing.Size(35, 13);
             this.lblTiempo.TabIndex = 5;
@@ -74,7 +76,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(713, 428);
+            this.lblFecha.Location = new System.Drawing.Point(395, 237);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(35, 13);
             this.lblFecha.TabIndex = 6;
@@ -83,19 +85,46 @@
             // btnSiguiente
             // 
             this.btnSiguiente.AutoSize = true;
-            this.btnSiguiente.Location = new System.Drawing.Point(328, 380);
+            this.btnSiguiente.Location = new System.Drawing.Point(211, 154);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(135, 58);
             this.btnSiguiente.TabIndex = 7;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // rbUsuario
+            // 
+            this.rbUsuario.AutoSize = true;
+            this.rbUsuario.Location = new System.Drawing.Point(211, 120);
+            this.rbUsuario.Name = "rbUsuario";
+            this.rbUsuario.Size = new System.Drawing.Size(61, 17);
+            this.rbUsuario.TabIndex = 27;
+            this.rbUsuario.TabStop = true;
+            this.rbUsuario.Text = "Usuario";
+            this.rbUsuario.UseVisualStyleBackColor = true;
+            this.rbUsuario.CheckedChanged += new System.EventHandler(this.rbUsuario_CheckedChanged);
+            // 
+            // rbAdministrador
+            // 
+            this.rbAdministrador.AutoSize = true;
+            this.rbAdministrador.Location = new System.Drawing.Point(211, 86);
+            this.rbAdministrador.Name = "rbAdministrador";
+            this.rbAdministrador.Size = new System.Drawing.Size(88, 17);
+            this.rbAdministrador.TabIndex = 26;
+            this.rbAdministrador.TabStop = true;
+            this.rbAdministrador.Text = "Administrador";
+            this.rbAdministrador.UseVisualStyleBackColor = true;
+            this.rbAdministrador.CheckedChanged += new System.EventHandler(this.rbAdministrador_CheckedChanged);
             // 
             // frmAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(546, 295);
+            this.Controls.Add(this.rbUsuario);
+            this.Controls.Add(this.rbAdministrador);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblTiempo);
@@ -117,5 +146,7 @@
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.RadioButton rbUsuario;
+        private System.Windows.Forms.RadioButton rbAdministrador;
     }
 }

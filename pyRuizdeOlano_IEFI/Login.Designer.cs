@@ -67,7 +67,7 @@
             // btnRegistro
             // 
             this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistro.Location = new System.Drawing.Point(190, 281);
+            this.btnRegistro.Location = new System.Drawing.Point(175, 284);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(73, 25);
             this.btnRegistro.TabIndex = 19;
@@ -130,7 +130,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(96, 281);
+            this.btnEntrar.Location = new System.Drawing.Point(93, 284);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 23;

@@ -34,6 +34,14 @@ namespace pyRuizdeOlano_IEFI
 
             string usuario = txtUser.Text;
             string contra = txtPass.Text;
+            lblTitulo.Text = "INICIAR SESION";
+            btnEntrar.Visible = true;
+            btnRegistro.Visible = false;
+            txtUser.Text = "";
+            txtPass.Text = "";
+            txtPass.Visible = true;
+            
+
 
             try
             {
@@ -72,6 +80,7 @@ namespace pyRuizdeOlano_IEFI
             txtUser.Text = "";
             txtPass.Text = "";
             lblRegi.Visible = false;
+           
             txtUser.Focus();
         }
 
