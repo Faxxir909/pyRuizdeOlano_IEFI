@@ -1,6 +1,6 @@
 ﻿namespace pryRuiz_de_Olano
 {
-    partial class frmStock
+    partial class frmAdministrador
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -79,9 +79,9 @@
             // btnCargar
             // 
             this.btnCargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCargar.Location = new System.Drawing.Point(109, 230);
+            this.btnCargar.Location = new System.Drawing.Point(92, 203);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.Size = new System.Drawing.Size(99, 26);
             this.btnCargar.TabIndex = 10;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -91,7 +91,7 @@
             // btnModificar
             // 
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnModificar.Location = new System.Drawing.Point(109, 259);
+            this.btnModificar.Location = new System.Drawing.Point(48, 288);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 11;
@@ -102,7 +102,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEliminar.Location = new System.Drawing.Point(109, 288);
+            this.btnEliminar.Location = new System.Drawing.Point(155, 288);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 12;
@@ -215,7 +215,7 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Descripcion";
             // 
-            // frmStock
+            // frmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,10 +235,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblProductos);
             this.Controls.Add(this.txtProductos);
-            this.Name = "frmStock";
+            this.Name = "frmAdministrador";
             this.Text = "Stock";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.frmAdministrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

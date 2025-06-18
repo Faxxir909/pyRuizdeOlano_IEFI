@@ -126,6 +126,7 @@
             this.lblRegi.Size = new System.Drawing.Size(106, 17);
             this.lblRegi.TabIndex = 22;
             this.lblRegi.Text = "Registrese aqui..";
+            this.lblRegi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblRegi.Click += new System.EventHandler(this.lblRegi_Click);
             // 
             // btnEntrar
@@ -142,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(362, 347);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.lblRegi);

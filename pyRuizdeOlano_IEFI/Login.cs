@@ -115,7 +115,7 @@ namespace pyRuizdeOlano_IEFI
                 {
                     MessageBox.Show("Inicio de sesión exitoso!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmAuditoria Auditoria = new frmAuditoria(usuario);
-                    Auditoria.Show();
+                    Auditoria.ShowDialog();
                     this.Hide();
                 }
                 else

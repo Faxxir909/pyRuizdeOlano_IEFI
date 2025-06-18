@@ -74,13 +74,13 @@ namespace pyRuizdeOlano_IEFI
             this.Hide();
             if (rbAdministrador.Checked)
             {
-                frmStock Administrador = new frmStock();
-                Administrador.Show();
+                frmAdministrador Administrador = new frmAdministrador();
+                Administrador.ShowDialog();
             }
             else if (rbUsuario.Checked)
             {
                 frmUsuario usuarios = new frmUsuario();
-                usuarios.Show();
+                usuarios.ShowDialog();
             }
         }
 
