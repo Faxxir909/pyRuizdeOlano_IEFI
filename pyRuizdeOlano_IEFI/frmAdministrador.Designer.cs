@@ -236,6 +236,7 @@
             this.Controls.Add(this.lblProductos);
             this.Controls.Add(this.txtProductos);
             this.Name = "frmAdministrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock";
             this.Load += new System.EventHandler(this.frmAdministrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();

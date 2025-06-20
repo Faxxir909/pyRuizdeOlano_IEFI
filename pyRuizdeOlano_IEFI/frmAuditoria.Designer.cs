@@ -131,6 +131,7 @@
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.label3);
             this.Name = "frmAuditoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auditoria";
             this.Load += new System.EventHandler(this.frmAuditoria_Load);
             this.ResumeLayout(false);

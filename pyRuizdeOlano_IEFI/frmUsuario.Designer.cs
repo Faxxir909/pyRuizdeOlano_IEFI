@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvGrilla_Usuario = new System.Windows.Forms.DataGridView();
-            this.btnListar = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnListar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla_Usuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,16 +53,6 @@
             this.dgvGrilla_Usuario.Name = "dgvGrilla_Usuario";
             this.dgvGrilla_Usuario.Size = new System.Drawing.Size(704, 344);
             this.dgvGrilla_Usuario.TabIndex = 0;
-            // 
-            // btnListar
-            // 
-            this.btnListar.Location = new System.Drawing.Point(331, 391);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
-            this.btnListar.TabIndex = 3;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // Codigo
             // 
@@ -94,6 +84,16 @@
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             // 
+            // btnListar
+            // 
+            this.btnListar.Location = new System.Drawing.Point(331, 391);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.TabIndex = 3;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +103,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvGrilla_Usuario);
             this.Name = "frmUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla_Usuario)).EndInit();
